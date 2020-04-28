@@ -2,9 +2,12 @@ terraform {
 
 required_providers {
     tfe = "~> 0.15.0"
-    hostname = var.hostname
-    token    = var.token
   }
+
+provider "tfe" {
+   hostname = var.hostname
+    token    = var.token
+}
 
   resource "tfe_organization" "test" {
     name  = "tfe-created-org"
