@@ -1,0 +1,5 @@
+variable "hostname" {
+}
+
+variable "token" {
+}
