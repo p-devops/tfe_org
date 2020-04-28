@@ -1,5 +1,3 @@
-terraform {
-
 provider "tfe" {
   hostname = "${var.hostname}"
   token    = "${var.token}"
@@ -25,4 +23,3 @@ provider "tfe" {
     team_id                    = tfe_team.test.id
     organization_membership_id = tfe_organization_membership.test.id
   }
-}
