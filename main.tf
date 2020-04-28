@@ -1,12 +1,7 @@
-terraform {
-
-required_providers {
-    tfe = "~> 0.15.0"
-  }
-
 provider "tfe" {
    hostname = var.hostname
-    token    = var.token
+   token    = var.token
+   version  = "~> 0.15.0"
 }
 
   resource "tfe_organization" "test" {
