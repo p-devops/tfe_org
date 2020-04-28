@@ -1,8 +1,10 @@
-provider "tfe" {
-  hostname = var.hostname
-  token    = var.token
-  version  = "~> 0.15.0"
-}
+terraform {
+
+required_providers {
+    tfe = "~> 0.15.0"
+    hostname = var.hostname
+    token    = var.token
+  }
 
   resource "tfe_organization" "test" {
     name  = "tfe-created-org"
@@ -23,3 +25,4 @@ provider "tfe" {
     team_id                    = tfe_team.test.id
     organization_membership_id = tfe_organization_membership.test.id
   }
+}
