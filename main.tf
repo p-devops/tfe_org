@@ -5,7 +5,7 @@ provider "tfe" {
 
 resource "tfe_organization" "test" {
     name  = "tfe-created-org"
-    email = "pleung@hashicorp.com"
+    email = var.user_email
   }
 
 resource "tfe_team" "test" {
@@ -15,7 +15,7 @@ resource "tfe_team" "test" {
 
 resource "tfe_organization_membership" "test" {
     organization = tfe_organization.test.id
-    email        = "pleung@hashicorp.com"
+    email        = var.user_email2
 }
 
 resource "tfe_team_organization_member" "test" {
