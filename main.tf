@@ -15,7 +15,7 @@ resource "tfe_team" "test" {
 
 resource "tfe_organization_membership" "test" {
     organization = tfe_organization.test.id
-    email        = var.user_email
+    email        = var.user_email2
 }
 
 resource "tfe_team_organization_member" "test" {
